@@ -138,6 +138,54 @@ class _MyProfileState extends State<MyProfile> {
           ),
         ),
         Padding(
+          padding: const EdgeInsets.only(left: 20.0, right: 10),
+          child: ListTile(
+            title: Text(
+              'Bio',
+              style: TextStyle(
+                fontSize: 18,
+                fontFamily: 'Ubuntu-Regular',
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            subtitle: Text(
+              'Adventure lover | Traveler | Artist',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Ubuntu-Regular',
+              ),
+            ),
+            trailing: Icon(
+              Iconsax.info_circle,
+              size: 20,
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 20.0, right: 10),
+          child: ListTile(
+            title: Text(
+              'Hobbies',
+              style: TextStyle(
+                fontSize: 18,
+                fontFamily: 'Ubuntu-Regular',
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            subtitle: Text(
+              'Hiking, Photography, Painting',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Ubuntu-Regular',
+              ),
+            ),
+            trailing: Icon(
+              Ionicons.heart_outline,
+              size: 20,
+            ),
+          ),
+        ),
+        Padding(
           padding: const EdgeInsets.only(left: 20.0, right: 10.0),
           child: ListTile(
             title: Text(

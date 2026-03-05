@@ -123,12 +123,33 @@ class _MyTripsState extends State<MyTrips> {
                 ),
               ),
               SizedBox(height: 5),
-              Text(
-                'Exploring Nature de la France',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Ubuntu-Regular',
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Exploring Nature de la France',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Ubuntu-Regular',
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: Colors.green.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Text(
+                      'Ongoing',
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: Colors.green,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Ubuntu-Regular',
+                      ),
+                    ),
+                  ),
+                ],
               ),
               Text(
                 'oct 01, 2019 - oct 21, 2019',

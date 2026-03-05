@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:triply/screens/notifications.dart';
 import 'package:triply/screens/profile.dart';
 
 AppBar header(context, {VoidCallback? onMenuPressed}) {
@@ -71,7 +72,13 @@ AppBar header(context, {VoidCallback? onMenuPressed}) {
     ),
     actions: [
       InkWell(
-        onTap: () => print('Notification tapped!'),
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => Notifications(),
+            ),
+          );
+        },
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 17.0, horizontal: 10),
           child: Stack(

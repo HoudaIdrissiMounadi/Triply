@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:triply/pages/events.dart';
 import 'package:triply/pages/explore.dart';
 import 'package:triply/pages/newsfeed.dart';
 import 'package:triply/pages/trips.dart';
@@ -27,6 +28,7 @@ class _MainScreenState extends State<MainScreen> {
           NewsFeed(),
           Explore(),
           Trips(),
+          Events(),
         ],
       ),
       bottomNavigationBar: BottomAppBar(
@@ -65,7 +67,6 @@ class _MainScreenState extends State<MainScreen> {
                     navigationTapped(1);
                   });
                   selectItem(1);
-                  print(_page);
                 },
                 child: Container(
                   height: 35,
@@ -102,6 +103,30 @@ class _MainScreenState extends State<MainScreen> {
                     child: Icon(
                       Iconsax.menu_board,
                       color: 2 == selectedItem ? Colors.white : Colors.black,
+                      size: 20,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 10),
+              InkWell(
+                onTap: () {
+                  setState(() {
+                    navigationTapped(3);
+                  });
+                  selectItem(3);
+                },
+                child: Container(
+                  height: 35,
+                  width: 35,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: 3 == selectedItem ? Colors.red : Colors.grey[300],
+                  ),
+                  child: Center(
+                    child: Icon(
+                      Iconsax.calendar,
+                      color: 3 == selectedItem ? Colors.white : Colors.black,
                       size: 20,
                     ),
                   ),
